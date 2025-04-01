@@ -104,18 +104,21 @@
     <div id="ref-examples">
     <h2>Examples</h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># example code</span></span></span>
-<span class="r-in"><span><span class="va">s</span><span class="op">&lt;-</span><span class="fu">rjd3toolkit</span><span class="fu">::</span><span class="va"><a href="https://rjdverse.github.io/rjd3toolkit/reference/retail.html" class="external-link">retail</a></span><span class="op">$</span><span class="va">AllOtherGenMerchandiseStores</span></span></span>
+<span class="r-in"><span><span class="va">s</span><span class="op">&lt;-</span><span class="fu">rjd3toolkit</span><span class="fu">::</span><span class="va">retail</span><span class="op">$</span><span class="va">AllOtherGenMerchandiseStores</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> 'retail' is not an exported object from 'namespace:rjd3toolkit'</span>
 <span class="r-in"><span><span class="va">q</span><span class="op">&lt;-</span><span class="fu"><a href="x11plus.html">x11plus</a></span><span class="op">(</span><span class="va">s</span>, <span class="fl">12</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 's' not found</span>
 <span class="r-in"><span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/ts.html" class="external-link">ts</a></span><span class="op">(</span>data<span class="op">=</span><span class="va">q</span><span class="op">$</span><span class="va">decomposition</span><span class="op">$</span><span class="va">sa</span>, start<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/start.html" class="external-link">start</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span>, frequency<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/time.html" class="external-link">frequency</a></span><span class="op">(</span><span class="va">s</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in q$decomposition:</span> object of type 'closure' is not subsettable</span>
 <span class="r-in"><span><span class="va">sc</span> <span class="op">&lt;-</span> <span class="fu"><a href="henderson.html">henderson</a></span><span class="op">(</span><span class="va">x</span>, length <span class="op">=</span> <span class="fl">13</span>, musgrave <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'x' not found</span>
 <span class="r-in"><span><span class="va">icr</span> <span class="op">&lt;-</span> <span class="fu"><a href="ic_ratio.html">ic_ratio</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">sc</span><span class="op">)</span></span></span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'x' not found</span>
 <span class="r-in"><span><span class="fu">select_trend_filter</span><span class="op">(</span><span class="va">icr</span>, freq <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       icr    length </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3.720734 23.000000 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'icr' not found</span>
 <span class="r-in"><span><span class="co"># Because Henderson filter is used, this is equivalent to:</span></span></span>
 <span class="r-in"><span><span class="fu">select_trend_filter</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       icr    length </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  3.720734 23.000000 </span>
+<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error:</span> object 'x' not found</span>
 </code></pre></div>
     </div>
   </div>
